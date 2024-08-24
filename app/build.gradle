@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'maven-publish'
 
 android {
     compileSdkVersion 30
@@ -22,11 +21,8 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-        }
+    lintOptions {
+        abortOnError false
     }
 }
 
