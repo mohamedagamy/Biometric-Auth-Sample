@@ -17,6 +17,12 @@ android {
         }
     }
     namespace 'com.an.biometric.sample'
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
+    }
 }
 
 dependencies {
